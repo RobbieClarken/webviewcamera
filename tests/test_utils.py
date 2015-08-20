@@ -13,3 +13,24 @@ def test_parse_response():
 def test_parse_response_raises_exception():
     with pytest.raises(exceptions.UnexpectedResponse):
         utils.parse_response('blerg')
+
+
+def test_parse_response_with_conversions():
+    converters = {
+        'y': int,
+        'z': lambda s: [int(v) for v in s.split(',')]
+    }
+    parsed = utils.parse_response('x:=1\ny==2\nz=3,4', converters=converters)
+    assert parsed['x'] == '1'
+    assert parsed['y'] == 2
+    assert parsed['z'] == [3, 4]
+
+
+def test_int_converter():
+    int_converter = utils.Converter(int)
+    assert int_converter('1') == 1
+
+
+def test_int_list_converter():
+    int_converter = utils.Converter(int, list_=True)
+    assert int_converter('1,2') == [1, 2]

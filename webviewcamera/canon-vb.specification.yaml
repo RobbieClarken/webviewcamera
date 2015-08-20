@@ -1,0 +1,15 @@
+timestamp:
+  type: float
+
+realtime:
+  type: float
+
+s.epoch:
+  type: str
+
+s.hardware:
+  type: str
+
+v.list:
+  type: str
+  list: true
