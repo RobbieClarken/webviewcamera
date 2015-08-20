@@ -18,7 +18,11 @@ def parse_response(response, converters=None):
     exception = exception_from_status(response.headers['livescope-status'])
     if exception is not None:
         raise exception(error_message(response.text))
-    return parse_parameters_response(response.text, converters)
+    content_type = response.headers['content-type']
+    if content_type.startswith('text/'):
+        return parse_parameters_response(response.text, converters)
+    else:
+        return response.content
 
 
 def exception_from_status(status):

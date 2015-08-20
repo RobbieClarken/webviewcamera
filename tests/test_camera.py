@@ -58,3 +58,9 @@ def test_set(camera):
 def test_control_without_parameter(camera):
     with pytest.raises(exceptions.ParameterMissing):
         camera.control({})
+
+
+@vcr.use_cassette()
+def test_image(camera):
+    image = camera.image()
+    assert len(image) > 10000

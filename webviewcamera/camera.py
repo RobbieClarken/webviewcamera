@@ -56,3 +56,8 @@ class Camera(object):
 
     def set(self, parameter, value):
         self.query('control.cgi', params={parameter: value})
+
+
+    def image(self):
+        response = self.query('image.cgi')
+        return parse_response(response)
