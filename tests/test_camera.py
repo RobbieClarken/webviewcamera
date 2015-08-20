@@ -63,4 +63,12 @@ def test_control_without_parameter(camera):
 @vcr.use_cassette()
 def test_image(camera):
     image = camera.image()
+    assert isinstance(image, bytes)
     assert len(image) > 10000
+
+
+@vcr.use_cassette()
+def test_video(camera):
+    video = camera.video(duration=1)
+    assert isinstance(video, bytes)
+    assert len(video) > 10000

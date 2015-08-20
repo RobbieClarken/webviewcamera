@@ -61,3 +61,12 @@ class Camera(object):
     def image(self):
         response = self.query('image.cgi')
         return parse_response(response)
+
+
+    def video(self, format='h264', duration=None):
+        params = {
+            'v': format,
+            'duration': duration,
+        }
+        response = self.query('video.cgi', params=params)
+        return parse_response(response)
