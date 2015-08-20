@@ -7,24 +7,41 @@ def test_urlencode_with_safe_chars():
     assert utils.urlencode_with_safe_chars({'x': 'a,b'}, ',') == 'x=a,b'
 
 
-def test_parse_response():
-    parsed = utils.parse_response('x:=1\ny==2\nz=3')
+def test_exception_from_status_where_status_is_ok():
+    assert utils.exception_from_status('0') == None
+
+
+def test_exception_from_status_where_status_is_bad():
+    exception = utils.exception_from_status('302 Camera is not available')
+    assert exception == exceptions.CameraNotAvailable
+
+
+def test_error_message():
+    text = ('--- WebView Livescope Http Server Error ---\n'
+            'Parameter Missing\n'
+            '1 parameter(s)\n')
+    assert utils.error_message(text) == 'Parameter Missing 1 parameter(s)'
+
+
+def test_parse_parameters_response():
+    parsed = utils.parse_parameters_response('x:=1\ny==2\nz=3')
     assert parsed['x'] == '1'
     assert parsed['y'] == '2'
     assert parsed['z'] == '3'
 
 
-def test_parse_response_raises_exception():
+def test_parse_parameters_response_raises_exception():
     with pytest.raises(exceptions.UnexpectedResponse):
-        utils.parse_response('blerg')
+        utils.parse_parameters_response('blerg')
 
 
-def test_parse_response_with_conversions():
+def test_parse_parameters_response_with_conversions():
     converters = {
         'y': int,
         'z': lambda s: [int(v) for v in s.split(',')]
     }
-    parsed = utils.parse_response('x:=1\ny==2\nz=3,4', converters=converters)
+    parsed = utils.parse_parameters_response('x:=1\ny==2\nz=3,4',
+                                             converters=converters)
     assert parsed['x'] == '1'
     assert parsed['y'] == 2
     assert parsed['z'] == [3, 4]

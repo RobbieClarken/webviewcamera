@@ -1,4 +1,4 @@
-from webviewcamera import Camera
+from webviewcamera import Camera, exceptions
 import pytest
 from vcr import VCR
 
@@ -52,3 +52,9 @@ def test_control(camera):
 @vcr.use_cassette()
 def test_set(camera):
     camera.set('c.1.zoom', 5000)
+
+
+@vcr.use_cassette()
+def test_control_without_parameter(camera):
+    with pytest.raises(exceptions.ParameterMissing):
+        camera.control({})

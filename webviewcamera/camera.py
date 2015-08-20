@@ -41,7 +41,7 @@ class Camera(object):
             parameter = ','.join(parameter)
         params = dict(item=parameter)
         response = self.query('info.cgi', params=params)
-        return parse_response(response.text, self._converters)
+        return parse_response(response, self._converters)
 
 
     def get(self, parameter):
@@ -51,7 +51,7 @@ class Camera(object):
 
     def control(self, updates):
         response = self.query('control.cgi', params=updates)
-        return parse_response(response.text, self._converters)
+        return parse_response(response, self._converters)
 
 
     def set(self, parameter, value):
