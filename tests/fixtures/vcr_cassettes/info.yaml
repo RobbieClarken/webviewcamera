@@ -1,0 +1,533 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.7.0 CPython/3.4.2 Darwin/13.4.0]
+    method: GET
+    uri: http://10.109.2.134/-wvhttp-01-/info.cgi
+  response:
+    body: {string: 'timestamp=5109793.181
+
+        realtime=1440052044.034
+
+        s.epoch:=Mon, 22 Jun 2015 13:05:42 +1000
+
+        s.hardware:=Canon VB-H41
+
+        s.firmware:=1.3.0
+
+        s.protocol:=02.31
+
+        v.list:=jpg:320x240:3:30000,jpg:480x270:3:30000,jpg:960x540:3:30000,jpg:1920x1080:3:30000,h264:1920x1080:0:15000
+
+        v.h264.cbr:=2048
+
+        c:=1
+
+        c.count:=1
+
+        c.1.type:=Canon VB-H41
+
+        c.1.status:=enabled
+
+        c.1.name.asc:=Camera
+
+        c.1.name.utf8:=
+
+        c.1.exp:=auto
+
+        c.1.exp.list:=auto,flickerfree,tv,manual
+
+        c.1.ae.autoss:=30
+
+        c.1.ae.autoss.list:=2,4,8,15,30
+
+        c.1.ae.shutter.list:=2,4,8,15,30,60,100,120,250,500,1000,2000,4000,8000,10000,16000
+
+        c.1.ae.brightness:=0
+
+        c.1.ae.brightness.min:=-8
+
+        c.1.ae.brightness.max:=8
+
+        c.1.ae.brightness.list:=-8,-6,-4,-2,0,2,4,6,8
+
+        c.1.ae.photometry:=center
+
+        c.1.ae.photometry.list:=center,average,spot
+
+        c.1.me.shutter.list:=1,2,4,8,15,30,60,100,120,250,500,1000,2000,4000,8000,10000,16000
+
+        c.1.me.iris.min:=5
+
+        c.1.me.iris.max:=32
+
+        c.1.me.gain.min:=0
+
+        c.1.me.gain.max:=39
+
+        c.1.dn:=off
+
+        c.1.dn.mode:=manual
+
+        c.1.dn.mode.list:=manual,auto1
+
+        c.1.wb:=auto
+
+        c.1.wb.list:=auto,manual,one_shot,sodium,halogen,mercury,fluorescent_w,fluorescent_l,fluorescent_h
+
+        c.1.is:=off
+
+        c.1.nr:=1
+
+        c.1.nr.min:=0
+
+        c.1.nr.max:=2
+
+        c.1.ac:=1
+
+        c.1.ac.min:=0
+
+        c.1.ac.max:=2
+
+        c.1.saturation:=1
+
+        c.1.saturation.min:=0
+
+        c.1.saturation.max:=2
+
+        c.1.shade:=off
+
+        c.1.shade.param:=0
+
+        c.1.shade.param.min:=0
+
+        c.1.shade.param.max:=6
+
+        c.1.focus:=manual
+
+        c.1.focus.list:=auto,infinity,manual
+
+        c.1.focus.value:=1586
+
+        c.1.focus.raw:=2542
+
+        c.1.zoom:=2762
+
+        c.1.zoom.d:=320
+
+        c.1.zoom.min:=320
+
+        c.1.zoom.max:=6040
+
+        c.1.zoom.limit.min:=320
+
+        c.1.zoom.limit.max:=6040
+
+        c.1.zoom.speed.min:=0
+
+        c.1.zoom.speed.max:=7
+
+        c.1.pan:=-2961
+
+        c.1.pan.min:=-17000
+
+        c.1.pan.max:=17000
+
+        c.1.pan.limit.min:=-17000
+
+        c.1.pan.limit.max:=17000
+
+        c.1.pan.speed.min:=62
+
+        c.1.pan.speed.max:=15000
+
+        c.1.pan.speed.ratio.min:=1
+
+        c.1.pan.speed.ratio.max:=500
+
+        c.1.tilt:=-5629
+
+        c.1.tilt.min:=-9000
+
+        c.1.tilt.max:=1000
+
+        c.1.tilt.limit.min:=-9000
+
+        c.1.tilt.limit.max:=1000
+
+        c.1.tilt.speed.min:=62
+
+        c.1.tilt.speed.max:=15000
+
+        c.1.tilt.speed.ratio.min:=1
+
+        c.1.tilt.speed.ratio.max:=500
+
+        c.1.view:=-20020:2699:40040:13398
+
+        c.1.view.restriction:=off
+
+        c.1.panorama.count:=1
+
+        c.1.panorama.1.view:=-20020:2698:40040:13396
+
+        c.1.panorama.1.image:=480x160:50:13492
+
+        c.1.panorama.1.timestamp:=Thu, 07 Aug 2014 11:20:48 +1000
+
+        c.1.home.pan:=-90
+
+        c.1.home.tilt:=-7231
+
+        c.1.home.zoom:=4640
+
+        c.1.home.focus:=auto
+
+        c.1.home.ae.brightness:=0
+
+        c.1.home.shade:=off
+
+        c.1.home.wb:=auto
+
+        i.count:=2
+
+        i.1:=0
+
+        i.1.name.asc:=
+
+        i.1.name.utf8:=
+
+        i.2:=0
+
+        i.2.name.asc:=
+
+        i.2.name.utf8:=
+
+        o.count:=2
+
+        o.1:=0
+
+        o.1.name.asc:=
+
+        o.1.name.utf8:=
+
+        o.2:=0
+
+        o.2.name.asc:=
+
+        o.2.name.utf8:=
+
+        p.count:=7
+
+        p.1.name.asc:=Robot dewar
+
+        p.1.name.utf8:=
+
+        p.1.c:=1
+
+        p.1.pan:=-3674
+
+        p.1.tilt:=-6318
+
+        p.1.zoom:=2808
+
+        p.1.focus:=auto
+
+        p.1.ae.brightness:=0
+
+        p.1.shade:=off
+
+        p.1.shade.param:=0
+
+        p.1.wb:=auto
+
+        p.2.name.asc:=Goni
+
+        p.2.name.utf8:=
+
+        p.2.c:=1
+
+        p.2.pan:=7042
+
+        p.2.tilt:=-7033
+
+        p.2.zoom:=597
+
+        p.2.focus:=manual:1586
+
+        p.2.ae.brightness:=0
+
+        p.2.shade:=off
+
+        p.2.shade.param:=0
+
+        p.2.wb:=auto
+
+        p.3.name.asc:=Detector
+
+        p.3.name.utf8:=
+
+        p.3.c:=1
+
+        p.3.pan:=15538
+
+        p.3.tilt:=-5931
+
+        p.3.zoom:=3147
+
+        p.3.focus:=auto
+
+        p.3.ae.brightness:=0
+
+        p.3.shade:=off
+
+        p.3.shade.param:=0
+
+        p.3.wb:=auto
+
+        p.4.name.asc:=Robot home
+
+        p.4.name.utf8:=
+
+        p.4.c:=1
+
+        p.4.pan:=-909
+
+        p.4.tilt:=-4522
+
+        p.4.zoom:=6040
+
+        p.4.focus:=auto
+
+        p.4.ae.brightness:=0
+
+        p.4.shade:=off
+
+        p.4.shade.param:=0
+
+        p.4.wb:=auto
+
+        p.5.name.asc:=Mirror placeholder
+
+        p.5.name.utf8:=
+
+        p.5.c:=1
+
+        p.5.pan:=-2119
+
+        p.5.tilt:=-985
+
+        p.5.zoom:=2374
+
+        p.5.focus:=auto
+
+        p.5.ae.brightness:=0
+
+        p.5.shade:=off
+
+        p.5.shade.param:=0
+
+        p.5.wb:=auto
+
+        p.6.name.asc:=Door
+
+        p.6.name.utf8:=
+
+        p.6.c:=1
+
+        p.6.pan:=-9396
+
+        p.6.tilt:=-3316
+
+        p.6.zoom:=6040
+
+        p.6.focus:=auto
+
+        p.6.ae.brightness:=0
+
+        p.6.shade:=off
+
+        p.6.shade.param:=0
+
+        p.6.wb:=auto
+
+        p.7.name.asc:=Robot overview
+
+        p.7.name.utf8:=
+
+        p.7.c:=1
+
+        p.7.pan:=-99
+
+        p.7.tilt:=-7240
+
+        p.7.zoom:=4658
+
+        p.7.focus:=manual:1586
+
+        p.7.ae.brightness:=0
+
+        p.7.shade:=off
+
+        p.7.shade.param:=0
+
+        p.7.wb:=auto
+
+        r.engine:=1
+
+        r.meta:=off
+
+        r.pseudo:=0
+
+        r.count:=15
+
+        r.1:=0
+
+        r.1.name.asc:=Lid movement
+
+        r.1.name.utf8:=
+
+        r.1.type:=1
+
+        r.2:=0
+
+        r.2.name.asc:=
+
+        r.2.name.utf8:=
+
+        r.2.type:=0
+
+        r.3:=0
+
+        r.3.name.asc:=
+
+        r.3.name.utf8:=
+
+        r.3.type:=0
+
+        r.4:=0
+
+        r.4.name.asc:=
+
+        r.4.name.utf8:=
+
+        r.4.type:=0
+
+        r.5:=0
+
+        r.5.name.asc:=
+
+        r.5.name.utf8:=
+
+        r.5.type:=0
+
+        r.6:=0
+
+        r.6.name.asc:=
+
+        r.6.name.utf8:=
+
+        r.6.type:=0
+
+        r.7:=0
+
+        r.7.name.asc:=
+
+        r.7.name.utf8:=
+
+        r.7.type:=0
+
+        r.8:=0
+
+        r.8.name.asc:=
+
+        r.8.name.utf8:=
+
+        r.8.type:=0
+
+        r.9:=0
+
+        r.9.name.asc:=
+
+        r.9.name.utf8:=
+
+        r.9.type:=0
+
+        r.10:=0
+
+        r.10.name.asc:=
+
+        r.10.name.utf8:=
+
+        r.10.type:=0
+
+        r.11:=0
+
+        r.11.name.asc:=
+
+        r.11.name.utf8:=
+
+        r.11.type:=0
+
+        r.12:=0
+
+        r.12.name.asc:=
+
+        r.12.name.utf8:=
+
+        r.12.type:=0
+
+        r.13:=0
+
+        r.13.name.asc:=
+
+        r.13.name.utf8:=
+
+        r.13.type:=0
+
+        r.14:=0
+
+        r.14.name.asc:=
+
+        r.14.name.utf8:=
+
+        r.14.type:=0
+
+        r.15:=0
+
+        r.15.name.asc:=
+
+        r.15.name.utf8:=
+
+        r.15.type:=0
+
+        a.count:=1
+
+        a.1.send:=on
+
+        a.1.recv:=off
+
+        a.1.detect:=0
+
+        e.count:=1
+
+        e.1:=0
+
+        f.sd:=0
+
+'}
+    headers:
+      Accept-Ranges: [none]
+      Cache-Control: [no-cache]
+      Content-Length: ['4731']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Thu, 20 Aug 2015 06:27:24 GMT']
+      Livescope-Status: ['0']
+      Pragma: [no-cache]
+      Server: [VB]
+    status: {code: 200, message: OK}
+version: 1
