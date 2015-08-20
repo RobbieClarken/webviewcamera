@@ -13,3 +13,6 @@ s.hardware:
 v.list:
   type: str
   list: true
+
+c.1.zoom:
+  type: int

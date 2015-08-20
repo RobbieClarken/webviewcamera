@@ -1,13 +1,9 @@
 from requests import Session
+import six
 import yaml
+from six.moves.urllib.parse import urljoin
 from pkg_resources import resource_stream
-from .utils import parse_response, Converter
-
-try:
-    from urlparse import urljoin
-    from urllib import urlencode, quote
-except ImportError:
-    from urllib.parse import urljoin, urlencode, quote
+from .utils import parse_response, Converter, urlencode_with_safe_chars
 
 
 class Camera(object):
@@ -31,6 +27,32 @@ class Camera(object):
         return urljoin(self._base_url, endpoint)
 
 
-    def info(self):
-        url = self.url('info.cgi')
-        return parse_response(self._session.get(url).text, self._converters)
+    def query(self, endpoint, params=None):
+        if params is not None:
+            params = {k: v for k, v in params.items() if v is not None}
+            params = urlencode_with_safe_chars(params, safe='+:,!')
+        url = self.url(endpoint)
+        response = self._session.get(url, params=params)
+        return response
+
+
+    def info(self, parameter=None):
+        if parameter and not isinstance(parameter, six.string_types):
+            parameter = ','.join(parameter)
+        params = dict(item=parameter)
+        response = self.query('info.cgi', params=params)
+        return parse_response(response.text, self._converters)
+
+
+    def get(self, parameter):
+        info = self.info(parameter)
+        return info[parameter]
+
+
+    def control(self, updates):
+        response = self.query('control.cgi', params=updates)
+        return parse_response(response.text, self._converters)
+
+
+    def set(self, parameter, value):
+        self.query('control.cgi', params={parameter: value})

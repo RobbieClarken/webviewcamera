@@ -5,13 +5,13 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.7.0 CPython/3.4.2 Darwin/13.4.0]
+      User-Agent: [python-requests/2.7.0 CPython/2.7.9 Darwin/13.4.0]
     method: GET
     uri: http://10.109.2.134/-wvhttp-01-/info.cgi
   response:
-    body: {string: 'timestamp=5109793.181
+    body: {string: !!python/unicode 'timestamp=5127499.153
 
-        realtime=1440052044.034
+        realtime=1440069750.006
 
         s.epoch:=Mon, 22 Jun 2015 13:05:42 +1000
 
@@ -107,15 +107,11 @@ interactions:
 
         c.1.shade.param.max:=6
 
-        c.1.focus:=manual
+        c.1.focus:=auto
 
         c.1.focus.list:=auto,infinity,manual
 
-        c.1.focus.value:=1586
-
-        c.1.focus.raw:=2542
-
-        c.1.zoom:=2762
+        c.1.zoom:=6040
 
         c.1.zoom.d:=320
 
@@ -131,7 +127,7 @@ interactions:
 
         c.1.zoom.speed.max:=7
 
-        c.1.pan:=-2961
+        c.1.pan:=-909
 
         c.1.pan.min:=-17000
 
@@ -149,7 +145,7 @@ interactions:
 
         c.1.pan.speed.ratio.max:=500
 
-        c.1.tilt:=-5629
+        c.1.tilt:=-4522
 
         c.1.tilt.min:=-9000
 
@@ -521,13 +517,13 @@ interactions:
 
 '}
     headers:
-      Accept-Ranges: [none]
-      Cache-Control: [no-cache]
-      Content-Length: ['4731']
-      Content-Type: [text/plain; charset=utf-8]
-      Date: ['Thu, 20 Aug 2015 06:27:24 GMT']
-      Livescope-Status: ['0']
-      Pragma: [no-cache]
-      Server: [VB]
+      accept-ranges: [none]
+      cache-control: [no-cache]
+      content-length: ['4686']
+      content-type: [text/plain; charset=utf-8]
+      date: ['Thu, 20 Aug 2015 11:22:30 GMT']
+      livescope-status: ['0']
+      pragma: [no-cache]
+      server: [VB]
     status: {code: 200, message: OK}
 version: 1

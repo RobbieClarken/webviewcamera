@@ -3,6 +3,10 @@ from webviewcamera import exceptions
 import pytest
 
 
+def test_urlencode_with_safe_chars():
+    assert utils.urlencode_with_safe_chars({'x': 'a,b'}, ',') == 'x=a,b'
+
+
 def test_parse_response():
     parsed = utils.parse_response('x:=1\ny==2\nz=3')
     assert parsed['x'] == '1'

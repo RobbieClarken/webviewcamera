@@ -1,5 +1,18 @@
 import re
+from six.moves.urllib.parse import  urlencode, quote
 from . import exceptions
+
+
+def urlencode_with_safe_chars(query, safe=''):
+    try:
+        return urlencode(query, safe=safe)
+    except TypeError:
+        # Python 2
+        if hasattr(query, 'items'):
+            query = query.items()
+        return '&'.join('{}={}'.format(k, quote(str(v), safe=safe))
+                        for k, v in query)
+
 
 def parse_response(response_data, converters=None):
     if converters is None:

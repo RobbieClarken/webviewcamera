@@ -1,0 +1,25 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.7.0 CPython/2.7.9 Darwin/13.4.0]
+    method: GET
+    uri: http://10.109.2.134/-wvhttp-01-/control.cgi?c.1.zoom=5000
+  response:
+    body: {string: !!python/unicode 'c.1.zoom:=5000
+
+'}
+    headers:
+      accept-ranges: [none]
+      cache-control: [no-cache]
+      content-length: ['15']
+      content-type: [text/plain; charset=utf-8]
+      date: ['Thu, 20 Aug 2015 12:10:38 GMT']
+      livescope-status: ['0']
+      pragma: [no-cache]
+      server: [VB]
+    status: {code: 200, message: OK}
+version: 1
