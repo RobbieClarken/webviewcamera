@@ -1,5 +1,5 @@
 import re
-from six.moves.urllib.parse import  urlencode, quote
+from six.moves.urllib.parse import urlencode, quote
 from . import exceptions
 
 
@@ -94,4 +94,3 @@ class Converter(object):
             return [self.type_(v) for v in value.split(',')]
         else:
             return self.type_(value)
-

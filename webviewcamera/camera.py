@@ -27,12 +27,12 @@ class Camera(object):
         return urljoin(self._base_url, endpoint)
 
 
-    def query(self, endpoint, params=None):
+    def query(self, endpoint, params=None, stream=False):
         if params is not None:
             params = {k: v for k, v in params.items() if v is not None}
             params = urlencode_with_safe_chars(params, safe='+:,!')
         url = self.url(endpoint)
-        response = self._session.get(url, params=params)
+        response = self._session.get(url, params=params, stream=stream)
         return response
 
 
