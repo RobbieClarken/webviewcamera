@@ -11,7 +11,7 @@ class Camera(object):
     def __init__(self, url, specification=None):
         self._base_url = urljoin(url, '/-wvhttp-01-/')
         if specification is None:
-            stream = resource_stream(__name__, 'canon-vb.specification.yaml')
+            stream = resource_stream(__name__, 'canon-vb.specification.yml')
             specification = yaml.load(stream)
         converters = {}
         for parameter, info in specification.items():

@@ -4,6 +4,7 @@ python:
   - 3.4
 sudo: false
 install:
-  - pip install -r requirements.txt
+  - pip install pytest vcrpy
+  - pip install -e .
 script:
   - py.test -v
