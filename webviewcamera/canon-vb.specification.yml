@@ -14,5 +14,421 @@ v.list:
   type: str
   list: true
 
+v.h264.cbr:
+  type: int
+
+c:
+  type: int
+
+c.count:
+  type: int
+
+c.1.type:
+  type: str
+
+c.1.status:
+  type: str
+
+c.1.name.asc:
+  type: str
+
+c.1.name.lang:
+  type: str
+
+c.1.exp:
+  type: str
+
+c.1.exp.list:
+  type: str
+  list: true
+
+c.1.ae.autoss:
+  type: int
+
+c.1.ae.autoss.list:
+  type: int
+  list: true
+
+c.1.ae.shutter:
+  type: int
+
+c.1.ae.shutter.list:
+  type: int
+  list: true
+
+c.1.ae.brightness:
+  type: int
+
+c.1.ae.brightness.min:
+  type: int
+
+c.1.ae.brightness.max:
+  type: int
+
+c.1.ae.brightness.list:
+  type: int
+  list: true
+
+c.1.ae.photometry:
+  type: str
+
+c.1.ae.photometry.list:
+  type: str
+  list: true
+
+c.1.me.shutter:
+  type: int
+
+c.1.me.shutter.list:
+  type: int
+  list: true
+
+c.1.me.iris:
+  type: int
+
+c.1.me.iris.min:
+  type: int
+
+c.1.me.iris.max:
+  type: int
+
+c.1.me.gain:
+  type: int
+
+c.1.me.gain.min:
+  type: int
+
+c.1.me.gain.max:
+  type: int
+
+c.1.dn:
+  type: str
+
+c.1.dn.mode:
+  type: str
+
+c.1.dn.mode.list:
+  type: str
+  list: true
+
+c.1.dn.irlight:
+  type: str
+
+c.1.dn.irlight.list:
+  type: str
+  list: true
+
+c.1.dn.irlight.param:
+  type: int
+
+c.1.dn.irlight.param.min:
+  type: int
+
+c.1.dn.irlight.param.max:
+  type: int
+
+c.1.wb:
+  type: str
+
+c.1.wb.list:
+  type: str
+  list: true
+
+c.1.wb.value:
+  type: str
+
+c.1.is:
+  type: str
+
+c.1.nr:
+  type: int
+
+c.1.nr.min:
+  type: int
+
+c.1.nr.max:
+  type: int
+
+c.1.ac:
+  type: int
+
+c.1.ac.min:
+  type: int
+
+c.1.ac.max:
+  type: int
+
+c.1.saturation:
+  type: int
+
+c.1.saturation.min:
+  type: int
+
+c.1.saturation.max:
+  type: int
+
+c.1.shade:
+  type: str
+
+c.1.shade.list:
+  type: str
+  list: true
+
+c.1.shade.param:
+  type: int
+
+c.1.shade.param.min:
+  type: int
+
+c.1.shade.param.max:
+  type: int
+
+c.1.defog:
+  type: str
+
+c.1.defog.list:
+  type: str
+  list: true
+
+c.1.defog.param:
+  type: int
+
+c.1.defog.param.min:
+  type: int
+
+c.1.defog.param.max:
+  type: int
+
+c.1.focus:
+  type: str
+
+c.1.focus.list:
+  type: str
+  list: true
+
+c.1.focus.value:
+  type: int
+
+c.1.focus.raw:
+  type: int
+
 c.1.zoom:
   type: int
+
+c.1.zoom.d:
+  type: int
+
+c.1.zoom.min:
+  type: int
+
+c.1.zoom.max:
+  type: int
+
+c.1.zoom.limit.min:
+  type: int
+
+c.1.zoom.limit.max:
+  type: int
+
+c.1.zoom.speed.pos:
+  type: int
+
+c.1.zoom.speed.dir:
+  type: int
+
+c.1.zoom.speed.min:
+  type: int
+
+c.1.zoom.speed.max:
+  type: int
+
+c.1.pan:
+  type: int
+
+c.1.pan.min:
+  type: int
+
+c.1.pan.max:
+  type: int
+
+c.1.pan.limit.min:
+  type: int
+
+c.1.pan.limit.max:
+  type: int
+
+c.1.pan.speed.pos:
+  type: int
+
+c.1.pan.speed.dir:
+  type: int
+
+c.1.pan.speed.min:
+  type: int
+
+c.1.pan.speed.max:
+  type: int
+
+c.1.pan.speed.mode.pos:
+  type: str
+
+c.1.pan.speed.mode.dir:
+  type: str
+
+c.1.pan.speed.mode.list:
+  type: str
+  list: true
+
+c.1.pan.speed.ratio.pos:
+  type: int
+
+c.1.pan.speed.ratio.dir:
+  type: int
+
+c.1.pan.speed.ratio.min:
+  type: int
+
+c.1.pan.speed.ratio.max:
+  type: int
+
+c.1.tilt:
+  type: int
+
+c.1.tilt.min:
+  type: int
+
+c.1.tilt.max:
+  type: int
+
+c.1.tilt.limit.min:
+  type: int
+
+c.1.tilt.limit.max:
+  type: int
+
+c.1.tilt.speed.pos:
+  type: int
+
+c.1.tilt.speed.dir:
+  type: int
+
+c.1.tilt.speed.min:
+  type: int
+
+c.1.tilt.speed.max:
+  type: int
+
+c.1.tilt.speed.mode.pos:
+  type: str
+
+c.1.tilt.speed.mode.dir:
+  type: str
+
+c.1.tilt.speed.mode.list:
+  type: str
+  list: true
+
+c.1.tilt.speed.ratio.pos:
+  type: int
+
+c.1.tilt.speed.ratio.dir:
+  type: int
+
+c.1.tilt.speed.ratio.min:
+  type: int
+
+c.1.tilt.speed.ratio.max:
+  type: int
+
+c.1.eflip:
+  type: str
+
+c.1.view:
+  type: str
+
+c.1.view.restriction:
+  type: str
+
+c.1.parorama.count:
+  type: int
+
+c.1.parorama.view:
+  type: str
+
+c.1.parorama.image:
+  type: str
+
+c.1.parorama.timestamp:
+  type: str
+
+c.1.home.pan:
+  type: int
+
+c.1.home.tilt:
+  type: int
+
+c.1.home.zoom:
+  type: int
+
+c.1.home.focus:
+  type: str
+
+c.1.home.eflip:
+  type: str
+
+c.1.home.exp:
+  type: str
+
+c.1.home.ae.autoss:
+  type: int
+
+c.1.home.ae.shutter:
+  type: int
+
+c.1.home.ae.brightness:
+  type: int
+
+c.1.home.ae.photometry:
+  type: int
+
+c.1.home.me.shutter:
+  type: int
+
+c.1.home.me.iris:
+  type: int
+
+c.1.home.me.gain:
+  type: int
+
+c.1.home.dn:
+  type: str
+
+c.1.home.dn.mode:
+  type: str
+
+c.1.home.wb:
+  type: str
+
+c.1.home.wb.value:
+  type: str
+
+c.1.home.nr:
+  type: int
+
+c.1.home.ac:
+  type: int
+
+c.1.home.saturation:
+  type: int
+
+c.1.home.shade:
+  type: str
+
+c.1.home.shade.param:
+  type: int
+
+c.1.home.defog:
+  type: str
+
+c.1.home.defog.param:
+  type: str
