@@ -1,6 +1,10 @@
 from webviewcamera import Camera, exceptions
+from webviewcamera.parameters import ZOOM
 import pytest
 from vcr import VCR
+from six import BytesIO
+from PIL import Image
+
 
 URL = 'http://10.109.2.134'
 vcr = VCR(cassette_library_dir='tests/fixtures/cassettes')
@@ -22,6 +26,7 @@ def test_info(camera):
     assert 1000000000 < info['realtime'] < 5000000000
     assert isinstance(info['v.list'], list)
     assert 'jpg:320x240:3:30000' in info['v.list']
+    assert info[ZOOM] == info['c.1.zoom']
 
 
 @vcr.use_cassette()
@@ -55,6 +60,12 @@ def test_set(camera):
 
 
 @vcr.use_cassette()
+def test_set_with_invalid_parameter(camera):
+    with pytest.raises(exceptions.ParameterMissing):
+        camera.set('blerg', 1)
+
+
+@vcr.use_cassette()
 def test_control_without_parameter(camera):
     with pytest.raises(exceptions.ParameterMissing):
         camera.control({})
@@ -65,6 +76,13 @@ def test_image(camera):
     image = camera.image()
     assert isinstance(image, bytes)
     assert len(image) > 10000
+
+
+@vcr.use_cassette()
+def test_image_with_format(camera):
+    data = camera.image(format='jpg:320x240')
+    image = Image.open(BytesIO(data))
+    assert image.size == (320, 240)
 
 
 @vcr.use_cassette()

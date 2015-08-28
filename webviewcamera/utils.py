@@ -28,6 +28,8 @@ def parse_response(response, converters=None):
 def exception_from_status(status):
     if status == '0':
         return None
+    elif status == '301 No Camera Control Right':
+        return exceptions.NoCameraControlRight
     elif status == '302 Camera is not available':
         return exceptions.CameraNotAvailable
     elif status == '303 Camera is not controllable':

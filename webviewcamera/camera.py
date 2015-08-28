@@ -15,7 +15,7 @@ class Camera(object):
             specification = yaml.load(stream)
         converters = {}
         for parameter, info in specification.items():
-            if info['type']not in ('str', 'int', 'float'):
+            if info['type'] not in ('str', 'int', 'float'):
                 raise Exception('Unexpected type')
             type_ = eval(info['type'])
             converters[parameter] = Converter(type_, info.get('list'))
@@ -55,11 +55,14 @@ class Camera(object):
 
 
     def set(self, parameter, value):
-        self.query('control.cgi', params={parameter: value})
+        self.control({parameter: value})
 
 
-    def image(self):
-        response = self.query('image.cgi')
+    def image(self, format=None):
+        params = {
+            'v': format,
+        }
+        response = self.query('image.cgi', params=params)
         return parse_response(response)
 
 
