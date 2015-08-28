@@ -4,7 +4,7 @@ python:
   - 3.4
 sudo: false
 install:
-  - pip install pytest vcrpy
+  - pip install pytest vcrpy pillow
   - pip install -e .
 script:
   - py.test -v
