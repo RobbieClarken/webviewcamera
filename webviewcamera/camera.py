@@ -3,6 +3,7 @@ import six
 import yaml
 from six.moves.urllib.parse import urljoin
 from pkg_resources import resource_stream
+
 from .utils import parse_response, Converter, urlencode_with_safe_chars
 
 
@@ -22,10 +23,8 @@ class Camera(object):
         self._converters = converters
         self._session = Session()
 
-
     def url(self, endpoint):
         return urljoin(self._base_url, endpoint)
-
 
     def query(self, endpoint, params=None, stream=False):
         if params is not None:
@@ -35,7 +34,6 @@ class Camera(object):
         response = self._session.get(url, params=params, stream=stream)
         return response
 
-
     def info(self, parameter=None):
         if parameter and not isinstance(parameter, six.string_types):
             parameter = ','.join(parameter)
@@ -43,20 +41,16 @@ class Camera(object):
         response = self.query('info.cgi', params=params)
         return parse_response(response, self._converters)
 
-
     def get(self, parameter):
         info = self.info(parameter)
         return info[parameter]
-
 
     def control(self, updates):
         response = self.query('control.cgi', params=updates)
         return parse_response(response, self._converters)
 
-
     def set(self, parameter, value):
         self.control({parameter: value})
-
 
     def image(self, format=None):
         params = {
@@ -64,7 +58,6 @@ class Camera(object):
         }
         response = self.query('image.cgi', params=params)
         return parse_response(response)
-
 
     def video(self, format='h264', duration=None):
         params = {

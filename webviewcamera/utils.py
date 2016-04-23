@@ -1,5 +1,7 @@
 import re
+
 from six.moves.urllib.parse import urlencode, quote
+
 from . import exceptions
 
 

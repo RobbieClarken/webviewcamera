@@ -14,13 +14,13 @@ class MockResponse(object):
 
 
 def test_parse_response_with_parameters():
-    headers={'livescope-status': '0', 'content-type': 'text/plain'}
+    headers = {'livescope-status': '0', 'content-type': 'text/plain'}
     response = MockResponse(headers)
     assert parse_response(response) == {}
 
 
 def test_parse_response_with_bad_status():
-    headers={
+    headers = {
         'livescope-status': '406 Parameter Missing',
         'content-type': 'text/plain',
     }
@@ -30,7 +30,7 @@ def test_parse_response_with_bad_status():
 
 
 def test_parse_response_with_image():
-    headers={
+    headers = {
         'livescope-status': '0',
         'content-type': 'image/jpeg',
     }

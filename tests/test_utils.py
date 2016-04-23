@@ -1,6 +1,6 @@
-from webviewcamera import utils
-from webviewcamera import exceptions
 import pytest
+
+from webviewcamera import utils, exceptions
 
 
 def test_urlencode_with_safe_chars():
@@ -8,7 +8,7 @@ def test_urlencode_with_safe_chars():
 
 
 def test_exception_from_status_where_status_is_ok():
-    assert utils.exception_from_status('0') == None
+    assert utils.exception_from_status('0') is None
 
 
 def test_exception_from_status_where_status_is_bad():
